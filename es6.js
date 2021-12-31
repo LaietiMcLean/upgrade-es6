@@ -71,5 +71,61 @@ const car = {
     console.log(year2);
     console.log(year3);
 
+//Iteración 3
+//Iteración 3.1
+const pointsList = [32, 54, 21, 64, 75, 43]
+
+    console.log(pointsList);
+    
+    let pointsList2 = [...pointsList];
+    console.log(pointsList2);
+
+//Iteración 3.2
+const toy = {
+    name2: 'Bus laiyiar', 
+    date: '20-30-1995', 
+    color: 'multicolor'
+};
+
+    console.log(toy);
+
+    let toy1 = { ...toy };
+    console.log(toy1);
+
+//Iteración 3.3
+const xpointsList = [32, 54, 21, 64, 75, 43];
+const x1pointsList = [54, 87, 99, 65, 32];
+
+    let pointListsConcat = [...xpointsList, ...x1pointsList];
+    console.log(pointListsConcat);
+
+//Iteración 3.4 
+const xtoy = {
+    name: 'Bus laiyiar', 
+    date: '20-30-1995', 
+    color: 'multicolor'
+};
+
+const toyUpdate = {
+    lights: 'rgb', 
+    power: ['Volar like a dragon', 'MoonWalk']
+}
+
+    let newObj = {...xtoy, ...toyUpdate};
+    console.log(newObj);
+
+//Iteración 3.5
+const colors = [
+    'rojo', 
+    'azul', 
+    'amarillo', 
+    'verde', 
+    'naranja'
+];
+
+    let colors2 = [...colors];
+    colors2.splice(2, 1);
+
+    console.log(colors2);
 
 }
