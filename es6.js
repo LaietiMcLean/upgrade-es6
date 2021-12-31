@@ -128,4 +128,44 @@ const colors = [
 
     console.log(colors2);
 
+//Iteración 4
+//Iteración 4.1 
+const users = [
+	{id:1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+
+    let nombres = users.map(users => users.name);
+        console.log(nombres);
+
+//Iteración 4.2
+    users.map(function(x) {
+        if (x.name[0] === 'A') {
+            x.name = 'Anacleto'
+        }
+            return x
+    })
+
+    console.log(users);
+
+//Iteración 4.3
+const cities = [
+	{isVisited:true, name: 'Tokyo'}, 
+	{isVisited:false, name: 'Madagascar'},
+	{isVisited:true, name: 'Amsterdam'}, 
+	{isVisited:false, name: 'Seul'}
+];
+
+    cities.map(function(y) {
+        if (y.isVisited == true) {
+            console.log(y.name + ": Visitado");
+        } else {
+            console.log(y.name);
+        }
+            return cities
+    })
+
+
 }
