@@ -301,5 +301,37 @@ console.log(porompmp);
 const concatAlienMutation = {...cucuxmx, ...porompmp}
 console.log(concatAlienMutation);
 
+//Iteración 7
+//Iteración 7.1
+const exams = [
+    {name: 'Yuyu Cabeza Crack', score: 5}, 
+    {name: 'Maria Aranda Jimenez', score: 1}, 
+    {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+    {name: 'Mercedez Regrera Brito', score: 7},
+    {name: 'Pamela Anderson', score: 3},
+    {name: 'Enrique Perez Lijó', score: 6},
+    {name: 'Pedro Benitez Pacheco', score: 8},
+    {name: 'Ayumi Hamasaki', score: 4},
+    {name: 'Robert Kiyosaki', score: 2},
+    {name: 'Keanu Reeves', score: 10}
+];
+    //En scoreS almaceno el array de los 10 score
+    let scoreS = exams.map(exams => exams.score);
+
+    let totalScore = scoreS.reduce((acumulador, numero) => acumulador + numero);
+        console.log(totalScore); //Devuelve 52
+
+//Iteración 7.2
+    let scoresApproved = exams.filter(x => x.score >= 5);
+    let approved = scoresApproved.map(scoresApproved => scoresApproved.score);
+
+    let totalScore2 = approved.reduce((acumulador, numero) => acumulador + numero);
+        console.log(totalScore2); //Devuelve 42
+
+ //Iteración 7.3       
+    let sum = scoreS.reduce((valorAnt, valorAct) => valorAct += valorAnt);
+    let average = sum / scoreS.length;
+
+    console.log(average); //Devuele 5.2
 
 }
