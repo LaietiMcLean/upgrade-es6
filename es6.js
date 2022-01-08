@@ -334,4 +334,23 @@ const exams = [
 
     console.log(average); //Devuele 5.2
 
+//Iteración 8
+const videogames = [
+    {name: 'Final Fantasy VII', genders: ['RPG'], score: 9.5},
+    {name: 'Assasins Creed Valhala', genders: ['Aventura', 'RPG'], score: 4.5},
+    {name: 'The last of Us 2', genders: ['Acción', 'Aventura'], score: 9.8},
+    {name: 'Super Mario Bros', genders: ['Plataforma'], score: 8.5},
+    {name: 'Genshin Impact', genders: ['RPG', 'Aventura'], score: 7.5},
+    {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
+]
+    //En selectGenders almaceno el array con los 4 JSON que contienen el gender 'RPG'
+    let selectGenders = videogames.filter(x => x.genders.includes('RPG'));
+    console.log(selectGenders);
+
+    let scoreS2 = selectGenders.map(selectGenders => selectGenders.score);
+    let sum2 = scoreS2.reduce((valorAnt, valorAct) => valorAct += valorAnt);
+    let average2 = sum2 / scoreS2.length;
+
+    console.log(average2); //Devuelve 7.875 
+
 }
