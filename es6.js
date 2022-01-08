@@ -167,5 +167,95 @@ const cities = [
             return cities
     })
 
+//Iteración 5
+//Iteración 5.1
+const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
 
+    let mayores = ages.filter(function(x) {
+        return x > 18;
+    })
+
+    console.log(mayores);
+
+//Iteración 5.2
+const ages2 = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+
+    let pares = ages2.filter(function(y) {
+        return y % 2 == 0;
+    })
+
+    console.log(pares);
+
+//Iteración 5.3
+const streamers = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'}, 
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+
+    let legends = streamers.filter(function(z) {
+        if (z.gameMorePlayed == 'League of Legends') {
+            return z;
+        } 
+    })
+
+    console.log(legends);
+
+//Iteración 5.4 
+    let uName = streamers.filter(function(w) {
+        if (w.name.includes('u')) {
+            return w;
+        }
+    })
+
+    console.log(uName);
+
+//Iteración 5.5 
+    let upLegends = streamers.filter(function(p) {
+        if (p.gameMorePlayed.includes('Legend')) {
+            if (p.age > 35) {
+                p.gameMorePlayed = p.gameMorePlayed.toUpperCase();
+            }
+            return p 
+        } 
+    })
+
+    console.log(upLegends);
+
+//Iteraciones 5.6 y 5.7
+//Aunque el programa funciona, no he conseguido emplear .filter() ni crear el evento del botón "Filtro"
+const streamers = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'}, 
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];
+
+
+    function selectElement(selector) {
+        return document.querySelector(selector);
+    }
+
+    function clearResults() {
+        selectElement('.search-results').innerHTML = "";
+    }
+
+    function getResults() {
+        const search = selectElement('.searchbar').value;
+
+        clearResults();
+        for(let i = 0; i < streamers.length; i++) {
+            if(streamers[i].name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+            ){ 
+                selectElement('.search-results').innerHTML += `
+                    <div class="search-results-item">
+                        <span class="search-item">${streamers[i].name}</span>
+                    </div>
+                `;
+            }
+        }
+    }
+        selectElement('.searchbar').addEventListener('keyup', getResults);
+      
 }
